@@ -1,6 +1,6 @@
 clc
 clear all
-close all
+% close all
 
 %% measurements 
 atoms_impedance_kapana2_old       = load('Z_meas_speaker_Magn_Phase_Z_free_air.dat'); 
@@ -21,6 +21,7 @@ z_atomebi_testing1_Datos_free     = load('Chveni_datos_awyobili_TEST1_free.txt')
 
 %% simulations firs try
 z_kapana2_LTSpicesimTest1 = load('atoms_dinamiki_chven_vaaraxdebai.txt');
+z_datos_awyobili_test1_sim1 = load('datos_awyobili1_test1_sim_testing1.txt');
 
 %% plots
 fig1 = figure; 
@@ -141,6 +142,9 @@ plot(z_atomebi_testing_Chemi_free(:,1),z_atomebi_testing_Chemi_free(:,2),'y','Li
 plot(z_atomebi_testing2_Chemi_free(:,1),z_atomebi_testing2_Chemi_free(:,2),'k--','LineWidth',2)
 plot(z_atomebi_testing3_Chemi_sruli(:,1),z_atomebi_testing3_Chemi_sruli(:,2),'g','LineWidth',2)
 plot(z_atomebi_testing1_Datos_free(:,1),z_atomebi_testing1_Datos_free(:,2),'r--','LineWidth',2)
+plot(z_datos_awyobili_test1_sim1(:,1),(sqrt((z_datos_awyobili_test1_sim1(:,3)).^2 + (z_datos_awyobili_test1_sim1(:,2)).^2)),'m--','LineWidth',2)
+
+
 
 
 % set(gca,'XTick',[100 1e3 1e4 1e5 1e6 10e6 100e6]);
