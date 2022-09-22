@@ -39,7 +39,7 @@ set(gca,'fontsize',14,'Xscale','log','Yscale','log')
 % set(gca,'fontsize',14,'Xscale','log')
 set(fig2,'position',[200   370   900   500])
 plot(z_kapana2_testing4_sruli(:,1),z_kapana2_testing4_sruli(:,2),'g','LineWidth',2)
-% plot(z_kapana2_LTSpicesimTest1(:,1),abs(z_kapana2_LTSpicesimTest1(:,3)),'k--','LineWidth',2)
+
 plot(z_kapana2_LTSpicesimTest1(:,1),(sqrt((z_kapana2_LTSpicesimTest1(:,3)).^2 + (z_kapana2_LTSpicesimTest1(:,2)).^2)),'m--','LineWidth',2)
 plot(z_kapana2_LTSpicesimTest2(:,1),(sqrt((z_kapana2_LTSpicesimTest2(:,3)).^2 + (z_kapana2_LTSpicesimTest2(:,2)).^2)),'y--','LineWidth',2)
 plot(z_kapana2_LTSpicesimTest3(:,1),(sqrt((z_kapana2_LTSpicesimTest3(:,3)).^2 + (z_kapana2_LTSpicesimTest3(:,2)).^2)),'g--','LineWidth',2)
@@ -48,9 +48,9 @@ plot(z_kapana2_LTSpicesimTest5(:,1),(sqrt((z_kapana2_LTSpicesimTest5(:,3)).^2 + 
 
 % plot(z_kapana2_LTSpicesimTest1(:,1),sqrt((z_kapana2_LTSpicesimTest1(:,2).*sind(z_kapana2_LTSpicesimTest1(:,3))).^2 + (z_kapana2_LTSpicesimTest1(:,2).*cosd(z_kapana2_LTSpicesimTest1(:,3))).^2),'k--','LineWidth',2)
 
-% set(gca,'XTick',[100 1e3 1e4 1e5 1e6 10e6 100e6]);
-% set(gca,'XTickLabel',['100Hz ';'1kHz  ';'10kHz ';'100kHz';'1MHz  ';'10MHz ';'100MHz'])
-xlim([1 30e3])
+set(gca,'XTick',[1 100 1e3 2e4]);
+set(gca,'XTickLabel',['1Hz   ';'100Hz ';'1kHz  ';'20kHz '])
+xlim([1 20e3])
 ylim([0 100])
 t = xlabel('Frequency [Hz]');
 p = ylabel('Meas Z magnitue ohm');
@@ -77,20 +77,21 @@ set(gca,'fontsize',14,'Xscale','log','Yscale','log')
 % set(gca,'fontsize',14,'Xscale','log')
 set(fig2,'position',[200   370   900   500])
 plot(z_kapana2_testing4_sruli(:,1),z_kapana2_testing4_sruli(:,2),'g','LineWidth',2)
-% plot(z_kapana2_LTSpicesimTest1(:,1),abs(z_kapana2_LTSpicesimTest1(:,3)),'k--','LineWidth',2)
+
 plot(z_kapana2_LTSpicesimTest1(:,1),(sqrt((z_kapana2_LTSpicesimTest1(:,3)).^2 + (z_kapana2_LTSpicesimTest1(:,2)).^2)),'m--','LineWidth',2)
 plot(z_kapana2_LTSpicesimTest6(:,1),(sqrt((z_kapana2_LTSpicesimTest6(:,3)).^2 + (z_kapana2_LTSpicesimTest6(:,2)).^2)),'r--','LineWidth',2)
 plot(z_kapana2_LTSpicesimTest7(:,1),(sqrt((z_kapana2_LTSpicesimTest7(:,3)).^2 + (z_kapana2_LTSpicesimTest7(:,2)).^2)),'b--','LineWidth',2)
 plot(z_kapana2_LTSpicesimTest8(:,1),(sqrt((z_kapana2_LTSpicesimTest8(:,3)).^2 + (z_kapana2_LTSpicesimTest8(:,2)).^2)),'k--','LineWidth',2)
 plot(z_kapana2_LTSpicesimTest9(:,1),(sqrt((z_kapana2_LTSpicesimTest9(:,3)).^2 + (z_kapana2_LTSpicesimTest9(:,2)).^2)),'y--','LineWidth',2)
 plot(z_kapana2_LTSpicesimTest10(:,1),(sqrt((z_kapana2_LTSpicesimTest10(:,3)).^2 + (z_kapana2_LTSpicesimTest10(:,2)).^2)),'g--','LineWidth',2)
-plot(L_xvia_test1(:,1),L_xvia_test1(:,2),'k','LineWidth',2)
+% plot(L_xvia_test1(:,1),L_xvia_test1(:,2),'k','LineWidth',2)
 
-
+set(gca,'XTick',[1 100 1e3 2e4]);
+set(gca,'XTickLabel',['1Hz   ';'100Hz ';'1kHz  ';'20kHz '])
 % plot(z_kapana2_LTSpicesimTest1(:,1),sqrt((z_kapana2_LTSpicesimTest1(:,2).*sind(z_kapana2_LTSpicesimTest1(:,3))).^2 + (z_kapana2_LTSpicesimTest1(:,2).*cosd(z_kapana2_LTSpicesimTest1(:,3))).^2),'k--','LineWidth',2)
 % set(gca,'XTick',[100 1e3 1e4 1e5 1e6 10e6 100e6]);
 % set(gca,'XTickLabel',['100Hz ';'1kHz  ';'10kHz ';'100kHz';'1MHz  ';'10MHz ';'100MHz'])
-xlim([1 30e3])
+xlim([1 20e3])
 ylim([0 100])
 t = xlabel('Frequency [Hz]');
 p = ylabel('Meas Z magnitue ohm');
